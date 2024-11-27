@@ -1,0 +1,365 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kalam:wght@300;400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kalam:wght@300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* CSS Variables */
+:root {
+
+    /* Colors */
+    --primary-color: #71B12C;
+    --secondary-color: #4FA826;
+    --tertiary-color: #00841A;
+    --color-text-primary: #ffffff;
+    --color-text-secundary: #000000;
+    --color-text-tertiary: #333333;
+
+    /* Fonts */
+    --primary-font: 'Roboto', sans-serif;
+    --title-font: 'Montserrat', sans-serif;
+}
+
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--primary-font);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-text-primary);
+    background-color: #f9f9f9;
+}
+
+.title-section {
+    font-family: var(--title-font);
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-align: center;
+    margin: 2rem 0;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    font-size: 1.3rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff; 
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-collapse {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.nav-link {
+    color: var(--secondary-color);
+}
+
+.nav-link:hover {
+    color: var(--tertiary-color);
+}
+
+.btn-nav {
+    font-size: 1.3rem;
+    font-weight: bold;
+    background-color: var(--secondary-color);
+    color: var(--color-text-primary);
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-nav:hover {
+    background-color: var(--tertiary-color);
+}
+/* Navbar */
+
+/* Banner */
+.banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    padding-top: 150px;
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 800px;
+    background-image: url('/images/Banner-fundo.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(50%); 
+    z-index: -1; 
+}
+
+.title-banner {
+    font-family: var(--title-font);
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--color-text-primary);
+    text-align: center;
+}
+
+.text-banner {
+    font-size: 1.3rem;
+    color: var(--color-text-primary);
+    text-align: center;
+    margin: 1rem 0;
+    width: 80%;
+}
+
+.btn-banner {
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: var(--secondary-color);
+    color: var(--color-text-primary);
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-banner:hover {
+    background-color: var(--tertiary-color);
+}
+
+@media (max-width: 670px) {
+    .banner {
+        height: 1000px;
+    }
+
+    .banner::before {
+        height: 980px;
+    }
+}
+
+/* Banner */
+
+/* projetos */
+
+.projetos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.projetos .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 3px solid var(--secondary-color);
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.card.animate {
+    opacity: 1;
+    animation: fadeInUp 1s ease forwards;
+}
+
+.card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-title {
+    font-family: var(--title-font);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-text-secundary);
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: var(--color-text-tertiary);
+    text-align: center;
+    margin: 1rem 0;
+}
+
+/* Animação para os cards */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* projetos */
+
+/* Beneficios */
+
+.beneficios {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    margin: 20px 0;
+  }
+  
+  thead tr {
+    background-color: var(--secondary-color) !important;
+    color: var(--color-text-primary) !important;   
+  }
+  
+  th, td {
+    padding: 10px;
+    border: 2px solid #ddd;
+  }
+
+ 
+/* Beneficios */
+
+/* Cases */
+
+.cases {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+
+.case-body {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.case-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: 240px;
+    margin-right: 40px;
+}
+
+.case-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    text-align: justify;
+}
+
+
+.case-name {
+    font-family: var(--title-font);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-text-secundary);
+}
+
+.case-text {
+    font-size: 1rem;
+    color: var(--color-text-tertiary) ;
+}
+
+.review-icon-star {
+    width: 40px;
+}
+
+@media (max-width: 770px) {
+    .case-body {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .case-img {
+        width: 250px;
+        margin-right: 0;
+        margin-bottom: 1rem;
+        max-width: 100%;
+    }
+
+    .case-content {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* Cases */
+
+/* Footer */
+
+footer {
+    background-color: var(--secondary-color);
+    color: var(--color-text-primary);
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.footer-logoimg {
+    width: 300px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.footer-title {
+    font-family: var(--title-font);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-text-primary);
+    margin-bottom: 1rem;
+}
+
+footer .fab {
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+footer .fab:hover {
+    color: var(--tertiary-color);
+}
