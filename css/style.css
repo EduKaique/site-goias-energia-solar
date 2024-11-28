@@ -48,6 +48,7 @@ body {
 .navbar {
     position: fixed;
     top: 0;
+    height: 120px;
     width: 100%;
     z-index: 1000;
     font-size: 1.3rem;

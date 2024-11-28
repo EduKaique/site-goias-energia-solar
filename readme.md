@@ -2,6 +2,8 @@
 
 Este repositório contém um projeto desenvolvido como parte de um teste técnico para a posição de Webdesigner. O objetivo do projeto é demonstrar habilidades em HTML e CSS, bem como a capacidade de criar uma interface de usuário responsiva e visualmente atraente.
 
+![Banner do Site](/images/site-readme.png)
+
 ## Estrutura do Projeto
 
 O projeto é composto pelos seguintes arquivos e diretórios:
