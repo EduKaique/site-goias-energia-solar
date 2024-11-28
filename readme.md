@@ -1,4 +1,4 @@
-# Teste Técnico para Webdesigner
+# Projeto de Site para Teste Técnico de Webdesigner 
 
 Este repositório contém um projeto desenvolvido como parte de um teste técnico para a posição de Webdesigner. O objetivo do projeto é demonstrar habilidades em HTML e CSS, bem como a capacidade de criar uma interface de usuário responsiva e visualmente atraente.
 
